@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.commands">
+		<command id="com.akikhtenko.split.split" name="Split editor"/>
+		<command id="com.akikhtenko.split.move" name="Move editor"/>
+   </extension>
+
+	<extension point="org.eclipse.ui.handlers">
+		<handler class="com.akikhtenko.split.SplitProcessor" commandId="com.akikhtenko.split.split"/>
+		<handler class="com.akikhtenko.split.MoveProcessor" commandId="com.akikhtenko.split.move"/>
+	</extension>
+
+	<extension point="org.eclipse.ui.bindings">
+		<key
+			commandId="com.akikhtenko.split.split"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M1+S S"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key
+			commandId="com.akikhtenko.split.move"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M1+S M"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+	</extension>
+
+</plugin>
