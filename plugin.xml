@@ -2,26 +2,29 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension point="org.eclipse.ui.commands">
-		<command id="com.akikhtenko.split.split" name="Split editor" defaultHandler="com.akikhtenko.split.SplitProcessor"/>
-   </extension>
-   <extension point="org.eclipse.ui.commands">
-		<command id="com.akikhtenko.split.move" name="Move editor" defaultHandler="com.akikhtenko.split.MoveProcessor"/>
+		<category id="com.akikhtenko.split" name="HandySplit" description="Split and manipulate open editors"/>
+		<command 
+			id="com.akikhtenko.split.split" 
+			name="Split editor" 
+			defaultHandler="com.akikhtenko.split.SplitProcessor"
+			categoryId="com.akikhtenko.split"/>
+		<command 
+			id="com.akikhtenko.split.move" 
+			name="Move editor" 
+			defaultHandler="com.akikhtenko.split.MoveProcessor"
+			categoryId="com.akikhtenko.split"/>
    </extension>
 
 	<extension point="org.eclipse.ui.bindings">
 		<key
 			commandId="com.akikhtenko.split.split"
 			contextId="org.eclipse.ui.contexts.window"
-			categoryId="org.eclipse.ui.category.navigate"
-			sequence="M1+4 S"
+			sequence="M2+M3+S S"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
-	</extension>
-	<extension point="org.eclipse.ui.bindings">
 		<key
 			commandId="com.akikhtenko.split.move"
 			contextId="org.eclipse.ui.contexts.window"
-			categoryId="org.eclipse.ui.category.navigate"
-			sequence="M1+4 M"
+			sequence="M2+M3+S M"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
 
