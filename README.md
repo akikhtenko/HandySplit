@@ -1,7 +1,7 @@
 HandySplit
 ==========
 
-An Eclipse plugin the purpose of which is to enable splitting and rearrangement of editors though keyboard shortcuts. 
+An Eclipse plugin the purpose of which is to enable splitting and rearrangement of editors through keyboard shortcuts. 
 
 The current plugin version ([download] (https://github.com/akikhtenko/HandySplit/raw/master/dist/HandySplit_1.0.2.201309241325.jar)) supports only Eclipse >=4.2 (Juno and Kepler).
 In order to make it work drop the binary into your dropins eclipse directory
