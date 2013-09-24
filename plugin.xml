@@ -13,6 +13,16 @@
 			name="Move editor" 
 			defaultHandler="com.akikhtenko.split.MoveProcessor"
 			categoryId="com.akikhtenko.split"/>
+		<command 
+			id="com.akikhtenko.split.clone" 
+			name="Clone editor" 
+			defaultHandler="com.akikhtenko.split.CloneProcessor"
+			categoryId="com.akikhtenko.split"/>
+		<command 
+			id="com.akikhtenko.split.exchange" 
+			name="Exchange editors" 
+			defaultHandler="com.akikhtenko.split.ExchangeProcessor"
+			categoryId="com.akikhtenko.split"/>
    </extension>
 
 	<extension point="org.eclipse.ui.bindings">
@@ -25,6 +35,16 @@
 			commandId="com.akikhtenko.split.move"
 			contextId="org.eclipse.ui.contexts.window"
 			sequence="M2+M3+S M"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key
+			commandId="com.akikhtenko.split.clone"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M2+M3+S C"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key
+			commandId="com.akikhtenko.split.exchange"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M2+M3+S E"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
 
