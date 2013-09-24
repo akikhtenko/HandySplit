@@ -23,6 +23,11 @@
 			name="Exchange editors" 
 			defaultHandler="com.akikhtenko.split.ExchangeProcessor"
 			categoryId="com.akikhtenko.split"/>
+		<command 
+			id="com.akikhtenko.split.flatten" 
+			name="Flatten split editors" 
+			defaultHandler="com.akikhtenko.split.FlattenProcessor"
+			categoryId="com.akikhtenko.split"/>
    </extension>
 
 	<extension point="org.eclipse.ui.bindings">
@@ -45,6 +50,11 @@
 			commandId="com.akikhtenko.split.exchange"
 			contextId="org.eclipse.ui.contexts.window"
 			sequence="M2+M3+S E"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key
+			commandId="com.akikhtenko.split.flatten"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M2+M3+S F"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
 
