@@ -7,7 +7,9 @@
 			id="com.akikhtenko.split.split" 
 			name="Split editor" 
 			defaultHandler="com.akikhtenko.split.SplitProcessor"
-			categoryId="com.akikhtenko.split"/>
+			categoryId="com.akikhtenko.split">
+			<commandParameter id="com.akikhtenko.split.direction" name="Direction"/>
+		</command>
 		<command 
 			id="com.akikhtenko.split.move" 
 			name="Move editor" 
@@ -17,7 +19,9 @@
 			id="com.akikhtenko.split.clone" 
 			name="Clone editor" 
 			defaultHandler="com.akikhtenko.split.CloneProcessor"
-			categoryId="com.akikhtenko.split"/>
+			categoryId="com.akikhtenko.split">
+			<commandParameter id="com.akikhtenko.split.direction" name="Direction"/>
+		</command>
 		<command 
 			id="com.akikhtenko.split.exchange" 
 			name="Exchange editors" 
@@ -35,7 +39,16 @@
 			commandId="com.akikhtenko.split.split"
 			contextId="org.eclipse.ui.contexts.window"
 			sequence="M2+M3+S S"
-			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+			<parameter id="com.akikhtenko.split.direction" value="H"/>
+		</key>
+		<key
+			commandId="com.akikhtenko.split.split"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M1+M3+S S"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+			<parameter id="com.akikhtenko.split.direction" value="V"/>
+		</key>
 		<key
 			commandId="com.akikhtenko.split.move"
 			contextId="org.eclipse.ui.contexts.window"
@@ -45,7 +58,16 @@
 			commandId="com.akikhtenko.split.clone"
 			contextId="org.eclipse.ui.contexts.window"
 			sequence="M2+M3+S C"
-			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+			<parameter id="com.akikhtenko.split.direction" value="H"/>
+		</key>
+		<key
+			commandId="com.akikhtenko.split.clone"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M1+M3+S C"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+			<parameter id="com.akikhtenko.split.direction" value="V"/>
+		</key>
 		<key
 			commandId="com.akikhtenko.split.exchange"
 			contextId="org.eclipse.ui.contexts.window"

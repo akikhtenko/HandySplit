@@ -5,6 +5,13 @@ public enum SplitDirection {
 	
 	private boolean horizontal;
 	
+	public static SplitDirection fromString(String abbreviation) {
+		if (abbreviation.equalsIgnoreCase("V")) {
+			return VERTICAL;
+		}
+		return HORIZONTAL;
+	}
+	
 	private SplitDirection(boolean isHorizontal) {
 		this.horizontal = isHorizontal;
 	}

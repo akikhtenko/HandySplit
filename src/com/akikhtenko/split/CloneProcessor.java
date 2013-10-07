@@ -1,5 +1,7 @@
 package com.akikhtenko.split;
 
+import static com.akikhtenko.split.SplitProcessor.DIRECTION_PARAM;
+
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
@@ -15,7 +17,8 @@ public class CloneProcessor extends AbstractHandler {
 		IWorkbenchWindow wnd = HandlerUtil.getActiveWorkbenchWindow(event);
 		EPartService partService = (EPartService) wnd.getService(EPartService.class);
 		
-		new CloneAction(partService).cloneSplit();
+		String direction = event.getParameter(DIRECTION_PARAM);
+		new CloneAction(partService).cloneSplit(SplitDirection.fromString(direction));
 		
 		return null;
 	}

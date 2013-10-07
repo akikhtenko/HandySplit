@@ -1,7 +1,5 @@
 package com.akikhtenko.split;
 
-import static com.akikhtenko.split.SplitDirection.HORIZONTAL;
-
 import org.eclipse.e4.ui.model.application.ui.MElementContainer;
 import org.eclipse.e4.ui.model.application.ui.MUIElement;
 import org.eclipse.e4.ui.model.application.ui.basic.MPart;
@@ -18,7 +16,7 @@ public class CloneAction {
 		this.partService = partService;
 	}
 	
-	public void cloneSplit() {
+	public void cloneSplit(SplitDirection splitDirection) {
 		MPart activeEditor = partService.getActivePart();
 		MPart clonedEditor = cloneEditor();		
 		
@@ -29,7 +27,7 @@ public class CloneAction {
 		activate(clonedEditor);
 		
 		if (splitSash.getChildren().size() != 2) {
-			new SplitAction(partService).split(HORIZONTAL);
+			new SplitAction(partService).split(splitDirection);
 		} else {
 			new MoveAction(partService).move();
 		}
