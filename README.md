@@ -1,8 +1,9 @@
 HandySplit
 ==========
+![HandySplit Logo](http://github.com/akikhtenko/HandySplit/raw/master/dist/handysplit.jpg)
 
-![HandySplit Logo](https://github.com/akikhtenko/HandySplit/raw/master/dist/handysplit.jpg) An Eclipse plugin that enables split and rearrangement of open editors with keyboard shortcuts. 
 
+An Eclipse plugin that enables split and rearrangement of open editors with keyboard shortcuts. 
 The current plugin version supports only Eclipse >=4.2 (Juno and higher).
 
 Installation
