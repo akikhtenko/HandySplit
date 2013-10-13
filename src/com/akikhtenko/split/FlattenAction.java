@@ -50,18 +50,29 @@ public class FlattenAction {
 			}
 		}
 	}
-	
+
+	// The method operates on the best effort basis removing dups only for the tabs
+	// where the input could be determined
 	private void remove_duplicates_from_left_stack(MElementContainer<MUIElement> leftEditorStack, MPart editor) {
 		IEditorInput editorInput = getInput(editor);
+		if (editorInput == null) {
+			return;
+		}
+		
 		for (MUIElement muiElement: new ArrayList<MUIElement>(leftEditorStack.getChildren())) {
-			if (editorInput.equals(getInput((MPart) muiElement))) {
+			IEditorInput candidateDup = getInput((MPart) muiElement);
+			if (candidateDup != null && editorInput.equals(candidateDup)) {
 				leftEditorStack.getChildren().remove(muiElement);
 			}
 		}
 	}
 
 	private IEditorInput getInput(MPart editor) {
-		return editor.getContext().get(IEditorPart.class).getEditorInput();
+		try {
+			return editor.getContext().get(IEditorPart.class).getEditorInput();
+		} catch (Exception e) {
+			return null;
+		}
 	}
 
 	private void activate(MPart newPart) {

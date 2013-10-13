@@ -8,7 +8,7 @@ The current plugin version supports only Eclipse >=4.2 (Juno and higher).
 
 Installation
 ----------
-Use the [update site](http://sourceforge.net/projects/handysplit/files/update/) or drop the [binary] (https://github.com/akikhtenko/HandySplit/raw/master/dist/HandySplit_1.0.4.201310092258.jar) into your Eclipse dropins directory
+Use the [update site](http://sourceforge.net/projects/handysplit/files/update/) or drop the [binary] (https://github.com/akikhtenko/HandySplit/raw/master/dist/HandySplit_1.0.5.201310131424.jar) into your Eclipse dropins directory
 
 Available actions
 ----------
@@ -20,3 +20,4 @@ Available actions
 + `ALT+CTRL+S, C`  Same as above but splits *vertically* if split is needed
 + `ALT+SHIFT+S, E` Exchanges selected tabs in two adjacent sections
 + `ALT+SHIFT+S, F` Flattens (collapses) the active split editor's sections back into one and removes all duplicate tabs (produced by the Clone action) on the same level
++ `ALT+SHIFT+S, T` Toggles the focus between the two sections (active tabs) of the split editor

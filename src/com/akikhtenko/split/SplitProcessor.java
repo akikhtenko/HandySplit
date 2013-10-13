@@ -1,25 +1,15 @@
 package com.akikhtenko.split;
 
-import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
-import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.e4.ui.workbench.modeling.EPartService;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.handlers.HandlerUtil;
 
-
-public class SplitProcessor extends AbstractHandler {
+public class SplitProcessor extends AbstractSplitHandler {
 
 	public static final String DIRECTION_PARAM = "com.akikhtenko.split.direction";
 
 	@Override
-	public Object execute(ExecutionEvent event) throws ExecutionException {
-		IWorkbenchWindow wnd = HandlerUtil.getActiveWorkbenchWindow(event);
-		EPartService partService = (EPartService) wnd.getService(EPartService.class);
-		
+	protected void handleAction(ExecutionEvent event, EPartService partService) {
 		String direction = event.getParameter(DIRECTION_PARAM);
-		new SplitAction(partService).split(SplitDirection.fromString(direction));
-		
-		return null;
+		new SplitAction(partService).split(SplitDirection.fromString(direction));		
 	}
 }

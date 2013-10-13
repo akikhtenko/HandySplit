@@ -32,6 +32,11 @@
 			name="Flatten split editors" 
 			defaultHandler="com.akikhtenko.split.FlattenProcessor"
 			categoryId="com.akikhtenko.split"/>
+		<command 
+			id="com.akikhtenko.split.toggle" 
+			name="Toggle focus between split editors" 
+			defaultHandler="com.akikhtenko.split.ToggleFocusProcessor"
+			categoryId="com.akikhtenko.split"/>
    </extension>
 
 	<extension point="org.eclipse.ui.bindings">
@@ -77,6 +82,11 @@
 			commandId="com.akikhtenko.split.flatten"
 			contextId="org.eclipse.ui.contexts.window"
 			sequence="M2+M3+S F"
+			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+		<key
+			commandId="com.akikhtenko.split.toggle"
+			contextId="org.eclipse.ui.contexts.window"
+			sequence="M2+M3+S T"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
 
