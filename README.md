@@ -1,6 +1,6 @@
 HandySplit
 ==========
-![HandySplit Logo](http://github.com/akikhtenko/HandySplit/raw/master/dist/handysplit.jpg)
+![HandySplit Logo](handysplit.jpg)
 
 
 An Eclipse plugin that enables split and rearrangement of open editors with keyboard shortcuts. 
@@ -21,3 +21,7 @@ Available actions
 + `ALT+SHIFT+S, E` Exchanges selected tabs in two adjacent sections
 + `ALT+SHIFT+S, F` Flattens (collapses) the active split editor's sections back into one and removes all duplicate tabs (produced by the Clone action) on the same level
 + `ALT+SHIFT+S, T` Toggles the focus between the two sections (active tabs) of the split editor
+
+All actions can be seen in built in Help, create with [Enide](http://enide.github.io/) & [GFM Viewer](https://github.com/satyagraha/gfm_viewer)
+
+[HandySplit plugin](https://github.com/akikhtenko/HandySplit) created by Alexander Kikhtenko

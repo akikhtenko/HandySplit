@@ -89,5 +89,13 @@
 			sequence="M2+M3+S T"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
 	</extension>
+	
+   <extension
+         point="org.eclipse.help.toc">
+      <toc
+            file="HelpToc.xml"
+            primary="true">
+      </toc>
+   </extension>
 
 </plugin>
